@@ -1,0 +1,160 @@
+<%= render "shared/header" %>
+<div class='main'>
+
+  
+  <div class='title-contents'>
+    <h2 class='service-title'>
+      子育てに関する悩み、喜びを共有するアプリ
+    </h2>
+    <p class='service-explain'>
+      KODOMOは子育てに関する悩みを皆で共有、
+    </p>
+    <p class='service-explain'>
+      情報交換ができるアプリです
+    </p>
+    <div class='store-btn'>
+      <%= link_to image_tag("app-store.svg", class:"apple-btn"), "#" %>
+      <%= link_to image_tag("google-play.png", class:"google-btn"), "#" %>
+    </div>
+  </div>
+  
+
+  
+
+  <%# 画面中央の「会員数日本一位」帯部分 %>
+
+  <div class='ad-contents'>
+    <h2 class='ad-title'>
+      KODOMOの使い方
+    </h2>
+    <div class= 'ad-image'>
+    <p class='ad-explain'>
+      うちの子は○歳だけど、まだこれができていないけど大丈夫なのか？
+    </p>
+    <p class='ad-explain'>
+      今日お買い物に言ったらうちの子が店員さんに笑顔でバイバイ、可愛いと言ってもらえた！
+    </p>
+    <p class='ad-explain'>
+      等々日々の育児に関する悩みや日常の喜びを発信し、同じ悩みを持っている、同じ経験があるお父さん、お母さんが情報交換や交流を行い、育児のストレスや悩みの解消するためのコミュニケーションツールです。
+    </p>
+    
+    </div>
+  </div>
+  <%# /画面中央の「会員数日本一位」帯部分 %>
+
+<%# FURIMAが選ばれる3つの理由部分 %>
+  <div class='select-reason-contents'>
+    <h2 class='title'>
+      KODOMOの主要機能
+    </h2>
+    <ul class='reason-lists'>
+      <li class='list'>
+        <%= image_tag "kodomo-intro01.jpg", class:"list-pict" %>
+        <span class='reason-list-number'>1</span>
+        <h3 class='reason-list-text'>
+          <span class='reason-list-blue-text'>日記</span>
+          投稿機能
+        </h3>
+        <p class='reason-list-description'>
+          子育てに関する悩みや情報を日記形式で投稿
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "kodomo-intro02.jpg", class:"list-pict" %>
+        <span class='reason-list-number'>2</span>
+        <h3 class='reason-list-text'>
+          <span class='reason-list-blue-text'>コメント</span>
+          機能
+        </h3>
+        <p class='reason-list-description'>
+          悩みに対する共感やアドバイス、グッズに対する質問などができる
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "kodomo-intro03.jpg", class:"list-pict" %>
+        <span class='reason-list-number'>3</span>
+        <h3 class='reason-list-text'>
+          <span class='reason-list-blue-text'>お気に入り</span>
+          登録機能
+        </h3>
+        <p class='reason-list-description'>
+          共感できるユーザーや有用な情報のある投稿、ユーザーを登録できる
+        </p>
+      </li>
+    </ul>
+  </div>
+  <%# /FURIMAが選ばれる3つの理由部分 %>
+
+
+  <%# 日記投稿一覧 %>
+  <div class='diary-contents'>
+    <h2 class='title'>最近の投稿</h2>
+  
+    <ul class='diary-lists'>
+
+      <%# 日記のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにする %>
+      <li class='list'>
+        <%= link_to "#" do %>
+        <div class='item-img-content'>
+          <%= image_tag "diary-sample.jpg", class: "diary-img" %>
+        </div>
+        <div class='diary-info'>
+          <h3 class='diary-title'>
+            <%= "日記タイトル" %>
+          </h3>
+          <div class='diary-user'>
+            <span>投稿者：<%= "投稿者名" %></span>
+            <div class='star-btn'>
+              <%= image_tag "star.png", class:"star-icon" %>
+              <span class='star-count'>0</span>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </li>
+      <%# //日記のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにする %>
+
+      <%# 日記投稿がない場合は以下のダミー投稿が表示されるようにする %>
+      <%# 投稿がある場合は表示されないようにする %>
+      <li class='list'>
+        <%= link_to '#' do %>
+        <%= image_tag "kodomo-sample2.jpg", class: "diary-img" %>
+        <div class='item-info'>
+          <h3 class='diary-title'>
+            おじいちゃんとおでかけ
+          </h3>
+          <div class='diary-user'>
+            <span>投稿者：まったりおばさん</span>
+            <div class='star-btn'>
+              <%= image_tag "star.png", class:"star-icon" %>
+              <span class='star-count'>0</span>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </li>
+      <li class='list'>
+        <%= link_to '#' do %>
+        <%= image_tag "diary-sample3.jpg", class: "diary-img" %>
+        <div class='item-info'>
+          <h3 class='diary-title'>
+            初めての注射
+          </h3>
+          <div class='diary-user'>
+            <span>投稿者：駆け出しママ</span>
+            <div class='star-btn'>
+              <%= image_tag "star.png", class:"star-icon" %>
+              <span class='star-count'>0</span>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </li>
+      <%# //投稿がある場合は表示されないようにする %>
+      <%# //日記投稿がない場合は以下のダミー投稿が表示されるようにしましょう %>
+    </ul>
+  </div>
+  <%# /日記投稿一覧 %>
+</div>
+
+<%= render "shared/footer" %>

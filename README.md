@@ -11,7 +11,7 @@
 | last_name          | string              | null: false               |
 | first_name_kana    | string              | null: false               |
 | last_name_kana     | string              | null: false               |
-| age                | string              | null: false               |
+| birthday           | data                | null: false               |
 | sex                | integer             | null: false               |
 | children_number    | integer             | null: false               |
 | children_sex       | integer             | null: false               |
