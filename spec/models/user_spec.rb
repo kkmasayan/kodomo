@@ -114,22 +114,22 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include("Birthday can't be blank")
       end
-      it 'sex_idが「---」だと出品できない' do
+      it 'sex_idが「---」だと登録できない' do
         @user.sex_id = 0
         @user.valid?
         expect(@user.errors.full_messages).to include("Sex can't be blank")
       end
-      it 'children_number_idが「---」だと出品できない' do
+      it 'children_number_idが「---」だと登録できない' do
         @user.children_number_id = 0
         @user.valid?
         expect(@user.errors.full_messages).to include("Children number can't be blank")
       end
-      it 'children_sex_idが「---」だと出品できない' do
+      it 'children_sex_idが「---」だと登録できない' do
         @user.children_sex_id = 0
         @user.valid?
         expect(@user.errors.full_messages).to include("Children sex can't be blank")
       end
-      it 'children_age_idが「---」だと出品できない' do
+      it 'children_age_idが「---」だと登録できない' do
         @user.children_age_id = 0
         @user.valid?
         expect(@user.errors.full_messages).to include("Children age can't be blank")
