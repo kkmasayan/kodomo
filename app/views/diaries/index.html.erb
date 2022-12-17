@@ -92,7 +92,38 @@
   
     <ul class='diary-lists'>
 
+      <% @diaries.each do |diary| %>
+      <li class='list'>
+        <%= link_to diary_path(diary.id)  do %>
+        <div class='diary-img-content'>
+         
+          
+            <%= image_tag diary.image, class: "diary-img" if diary.image.attached? %>
+         
+
+        </div>
+        <div class='diary-info'>
+          <h3 class='diary-name'>
+            <%= "#{diary.title}" %>
+          </h3>
+          <div class='diary-name'>
+            <span><%= "#{(diary.user).nickname}" %></span>
+            </div>
+          
+          <div class='diary-category'>
+            <span><%#= "#{diary.category}" %><br><%= "#{Category.find(diary.category_id).name}" %></span>
+            <div class='star-btn'>
+              <%= image_tag "star.png", class:"star-icon" %>
+              <span class='star-count'>0</span>
+            </div>
+          </div>
+      
+         <% end %>
+        <% end %>
+      </li>
+
       <%# 日記のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにする %>
+       <% if @diaries.blank? then %>
       <li class='list'>
         <%= link_to "#" do %>
         <div class='item-img-content'>
@@ -112,6 +143,7 @@
         </div>
         <% end %>
       </li>
+     
       <%# //日記のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにする %>
 
       <%# 日記投稿がない場合は以下のダミー投稿が表示されるようにする %>
@@ -150,6 +182,7 @@
         </div>
         <% end %>
       </li>
+       <% end %>
       <%# //投稿がある場合は表示されないようにする %>
       <%# //日記投稿がない場合は以下のダミー投稿が表示されるようにしましょう %>
     </ul>

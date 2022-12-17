@@ -2,6 +2,7 @@ class Diary < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
   has_one_attached :image
+  belongs_to :user
 
   with_options presence: true do
     validates :title, :text

@@ -4,6 +4,7 @@ class User < ApplicationRecord
   belongs_to :children_sex
   belongs_to :children_number
   belongs_to :children_age
+  has_many   :diaries
 
 
   # Include default devise modules. Others available are:
