@@ -1,9 +1,9 @@
 <%= render "shared/header" %>
 
 <%# 日記の概要 %>
-<div class="item-show">
-  <div class="item-box">
-    <h2 class="name">
+<div class="diary-show">
+  <div class="diary-box">
+    <h2 class="title">
       <%= "#{@diary.title}" %>
     </h2>
     <div class="item-img-content">
@@ -22,25 +22,25 @@
 
     <%# //ログインしているユーザーと投稿しているユーザーが、同一人物の場合と同一人物ではない場合で、処理を分けましょう %>
 
-    <div class="item-explain-box">
+    <div class="diary-explain-box">
       <span><%= @diary.title %></span>
     </div>
     <table class="detail-table">
       <tbody>
         <tr>
-          <th class="detail-item">タイトル</th>
+          <th class="detail-diary">タイトル</th>
           <td class="detail-value"><%= @diary.title %></td>
         </tr>
         <tr>
-          <th class="detail-item">ニックネーム</th>
+          <th class="detail-diary">ニックネーム</th>
           <td class="detail-value"><%=(@diary.user).nickname  %></td>
         </tr>
         <tr>
-          <th class="detail-item">カテゴリー</th>
+          <th class="detail-diary">カテゴリー</th>
           <td class="detail-value"><%= "#{Category.find(@diary.category_id).name}" %></td>
         </tr>
         <tr>
-          <th class="detail-item">日記内容</th>
+          <th class="detail-diary">日記内容</th>
           <td class="detail-value"><%= @diary.text %></td>
         </tr>
       </tbody>
@@ -83,7 +83,7 @@
     </a>
   </div>
   <%# 詳細ページで表示されているカテゴリー名を表示 %>
-  <a href="#" class="another-item"><%= "カテゴリー名" %>をもっと見る</a>
+  <a href="#" class="another-diary"><%= "カテゴリー名" %>をもっと見る</a>
   <%# //詳細ページで表示されているカテゴリー名を表示 %>
 </div>
 
