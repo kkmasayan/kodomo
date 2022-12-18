@@ -12,7 +12,7 @@
     
     <%# ログインしているユーザーと投稿しているユーザーが、同一人物の場合と同一人物ではない場合で、処理を分けましょう %>
     <%if user_signed_in? && current_user.id == @diary.user_id %>
-    <%= link_to "日記の編集", "#", method: :get, class: "diary-red-btn" %>
+    <%= link_to "日記の編集", edit_diary_path(@diary.id), method: :get, class: "diary-red-btn" %>
     <p class="or-text">or</p>
     <%= link_to "削除", "#", method: :delete, class:"diary-destroy" %>
     <% end %>
