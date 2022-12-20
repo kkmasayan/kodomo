@@ -18,6 +18,8 @@ class DiariesController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @diary.comments.includes(:user)
   end
   
   def edit
