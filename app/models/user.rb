@@ -6,6 +6,7 @@ class User < ApplicationRecord
   belongs_to :children_age
   has_many   :diaries
   has_many   :comments
+  has_many :favorites, dependent: :destroy
 
 
   # Include default devise modules. Others available are:
