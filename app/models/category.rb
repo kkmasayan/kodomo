@@ -9,10 +9,9 @@ class Category < ActiveHash::Base
     { id: 6, name: 'グッズ' },
     { id: 7, name: 'スポーツ・レジャー' },
     { id: 8, name: '病気' },
-    { id: 9, name: 'その他' },
+    { id: 9, name: 'その他' }
   ]
 
   include ActiveHash::Associations
- has_many :diaries
-
+  has_many :diaries
 end
