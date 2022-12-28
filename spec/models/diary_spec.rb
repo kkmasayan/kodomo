@@ -1,12 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Diary, type: :model do
-before do
-  @diary = FactoryBot.build(:diary)
-end
+  before do
+    @diary = FactoryBot.build(:diary)
+  end
 
-describe '日記投稿' 
-  context '投稿できる場合' 
+  describe '日記投稿'
+  context '投稿できる場合'
   it '全ての項目が存在すれば投稿できる' do
     expect(@diary).to be_valid
   end
