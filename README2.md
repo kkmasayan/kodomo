@@ -51,7 +51,7 @@ https://docs.google.com/spreadsheets/d/1h0bTP7A1KGApZT_PVNvDo65OA_vMVNAezHDyp9t-
 
 
 # 開発環境
-・　フロントエンド<bt>
+・　フロントエンド<br>
 ・　バックエンド<br>
 ・　インフラ<br>
 ・　テスト<br>
@@ -59,10 +59,10 @@ https://docs.google.com/spreadsheets/d/1h0bTP7A1KGApZT_PVNvDo65OA_vMVNAezHDyp9t-
 ・　タスク管理<br>
 
 # ローカルでの動作方法
-  % git clone https://github.com/kkmasayan/kodomo
-  % cd kodomo
-  % bundle install
-  % yarn install
+  % git clone https://github.com/kkmasayan/kodomo<br>
+  % cd kodomo<br>
+  % bundle install<br>
+  % yarn install<br>
 # 工夫したポイント
 　不明点や実装につまづいた際の解消についてです。実装時に発生したエラーや詰まった際にオンラインスクールの質問が利用できないこともあり、質問サイトや動画で実装手順等を確認、それでもうまくいかない際は質問サイト等で似たような状況に直面している案件を確認していき、解決し、実装を進めていくことで完成させていくことができました。
 
