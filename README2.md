@@ -1,6 +1,6 @@
 # アプリケーション名
 
-KODOMIO
+KODOMO
 
 # アプリケーション概要
 育児に関する悩み、日常生活を日記投稿の形でシェアし、ユーザー同士でコミュニケーションをとることで、悩みの解消、情報を共有することができる。
@@ -42,11 +42,11 @@ https://docs.google.com/spreadsheets/d/1h0bTP7A1KGApZT_PVNvDo65OA_vMVNAezHDyp9t-
 現在、ユーザー管理既往を実装中
 
 # データベース設計
-[![Image from Gyazo](https://i.gyazo.com/8be5f3e294dd971b517a2987fe18409e.png)](https://gyazo.com/8be5f3e294dd971b517a2987fe18409e)
+[![Image from Gyazo](https://i.gyazo.com/43847700e27d543101f6b158e402b553.png)](https://gyazo.com/43847700e27d543101f6b158e402b553)
 
 #　画面遷移図
 
-[![Image from Gyazo](https://i.gyazo.com/7f25e25db1128240c19410e70d578096.png)](https://gyazo.com/7f25e25db1128240c19410e70d578096)
+[![Image from Gyazo](https://i.gyazo.com/5794b8f9ba10fad907cdba877a79aae3.png)](https://gyazo.com/5794b8f9ba10fad907cdba877a79aae3)
 
 
 
@@ -59,7 +59,11 @@ https://docs.google.com/spreadsheets/d/1h0bTP7A1KGApZT_PVNvDo65OA_vMVNAezHDyp9t-
 ・　タスク管理<br>
 
 # ローカルでの動作方法
-
+  % git clone https://github.com/kkmasayan/kodomo
+  % cd kodomo
+  % bundle install
+  % yarn install
 # 工夫したポイント
+　不明点や実装につまづいた際の解消についてです。実装時に発生したエラーや詰まった際にオンラインスクールの質問が利用できないこともあり、質問サイトや動画で実装手順等を確認、それでもうまくいかない際は質問サイト等で似たような状況に直面している案件を確認していき、解決し、実装を進めていくことで完成させていくことができました。
 
 
