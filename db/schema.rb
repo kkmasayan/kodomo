@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
@@ -29,6 +30,8 @@ ActiveRecord::Schema.define(version: 2022_12_21_134903) do
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> 6688c3eea5a269900823cc85f453671ffb98ae74
 ActiveRecord::Schema.define(version: 20_221_221_143_320) do
   create_table 'active_storage_attachments', options: 'ENGINE=InnoDB DEFAULT CHARSET=utf8', force: :cascade do |t|
     t.string 'name', null: false
@@ -39,10 +42,13 @@ ActiveRecord::Schema.define(version: 20_221_221_143_320) do
     t.index ['blob_id'], name: 'index_active_storage_attachments_on_blob_id'
     t.index %w[record_type record_id name blob_id], name: 'index_active_storage_attachments_uniqueness',
                                                     unique: true
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 >>>>>>> d686ea1030dd56fed5b6d7819a90ffd2f225d68c
 >>>>>>> Stashed changes
+=======
+>>>>>>> 6688c3eea5a269900823cc85f453671ffb98ae74
   end
 
   create_table 'active_storage_blobs', options: 'ENGINE=InnoDB DEFAULT CHARSET=utf8', force: :cascade do |t|

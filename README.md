@@ -23,7 +23,7 @@
 * has_many   :diaries
 * has_many   :footstamps
 * has_many   :favorites
-* has_many   :footstamps
+
 
 ## diaries table
 
@@ -39,7 +39,6 @@
 * belongs_to :user
 * has_many   :comments
 * has_many   :favorites
-* has_many   :footstamps
 
 ## favorites table
 
@@ -53,17 +52,6 @@
 * belongs_to :user
 * belongs_to :diary
 
-## footsamps table
-
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| user    | references | null: false, foreign_key: true |
-| diary   | references | null: false, foreign_key: true |
-
-### Association
-
-* belongs_to :user
-* belongs_to :diary
 
 ## comments table
 

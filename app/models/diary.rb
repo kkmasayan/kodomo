@@ -5,7 +5,10 @@ class Diary < ApplicationRecord
   belongs_to :user, optional: true
   has_many :comments
   has_many :favorites, dependent: :destroy
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+>>>>>>> 6688c3eea5a269900823cc85f453671ffb98ae74
 
 <<<<<<< Updated upstream
 =======
