@@ -1,0 +1,40 @@
+<div class="mypage-contents">
+  <p><%= @nickname %>さんの投稿一覧</p>
+
+  <% @diaries.each do |diary| %>
+    <%= render partial: "diaries/diary", locals: { diary: diary } %>
+  <% end %>
+ <div class='diary-contents'>
+    <h2 class='title'>お気に入り一覧</h2>
+  <% if @favorite_list.present?%>
+    <ul class='diary-lists'>
+
+       <% @favorite_list.each do |diary|%>
+      <li class='list'>
+        <%= link_to diary_path(diary.id)  do %>
+        <div class='diary-img-content'>
+         
+          
+            <%= image_tag diary.image, class: "diary-img" if diary.image.attached? %>
+         
+
+        </div>
+        <div class='diary-info'>
+          <h3 class='diary-name'>
+            <%= "#{diary.title}" %>
+          </h3>
+          <div class='diary-name'>
+            <span><%= "#{(diary.user).nickname}" %></span>
+            </div>
+          
+          <div class='diary-category'>
+            <span><%= "#{Category.find(diary.category_id).name}" %></span>
+          
+          </div>
+      
+         <% end %>
+        <% end %>
+        <% end %>
+      </li>
+   </ul>
+</div>

@@ -47,14 +47,14 @@
     </table>
     <div class="option">
     <%unless user_signed_in? && current_user.id == @diary.user_id then%>
-      <div class="favorite-btn">
-        <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
-        <span>お気に入り 0</span>
-      </div>
-      <div class="report-btn">
-        <%= image_tag "flag.png" ,class:"report-flag-icon" ,width:"20",height:"20"%>
-        <span>通報</span>
-      </div>
+
+    <div class='star-btn' id="favorite_<%= @diary.id %>">
+  <%= render "favorites/favorite", diary: @diary %>
+  <%else%>
+  <div class="favorite-btn">
+       <p><span>お気に入りされた数: </span><%= @diary.favorites.count %></p>
+     </div>
+</div>
     <% end %>
     </div>
   </div>
@@ -82,17 +82,6 @@
         </p>
       <% end %>
     </div>
-  <div class="links">
-    <a href="#" class="change-item-btn">
-      ＜ 前の投稿
-    </a>
-    <a href="#" class="change-item-btn">
-      後ろの投稿 ＞
-    </a>
-  </div>
-  <%# 詳細ページで表示されているカテゴリー名を表示 %>
-  <a href="#" class="another-diary"><%= "カテゴリー名" %>をもっと見る</a>
-  <%# //詳細ページで表示されているカテゴリー名を表示 %>
-</div>
+
 
 <%= render "shared/footer" %>

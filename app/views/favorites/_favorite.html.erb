@@ -1,0 +1,20 @@
+
+<% if user_signed_in?  %>
+   <div class="option" >
+   <%= link_to diary_favorites_path(@diary.id), method: :post do %>
+     <div class="favorite-btn">
+       <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
+       <p><span>お気に入り登録: </span><br><%=  "登録数 = #{@diary.favorites.count}"%></p>
+     </div>
+    <% end %>
+    <%= link_to diary_favorite_path(@diary.id), method: :delete do %>
+     <div class="report-btn">
+       <%= image_tag "flag.png" ,class:"report-flag-icon" ,width:"20",height:"20"%>
+       <p>お気に入り解除 </p>
+     </div>
+    <% end %>
+     
+     <% else %>
+       <p>※※※お気に入りをするにはユーザー登録をしましょう※※※</p>
+     <% end %>
+   </div>

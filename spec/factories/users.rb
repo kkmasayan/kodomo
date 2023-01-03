@@ -10,9 +10,8 @@ FactoryBot.define do
     first_name_kana { 'ハナコ' }
     birthday { Faker::Date.birthday }
     sex_id { Faker::Number.between(from: 1, to: 2) }
-    children_number_id  { Faker::Number.between(from: 1, to: 7) }
+    children_number_id { Faker::Number.between(from: 1, to: 7) }
     children_age_id { Faker::Number.between(from: 1, to: 6) }
     children_sex_id { Faker::Number.between(from: 1, to: 3) }
   end
 end
-  

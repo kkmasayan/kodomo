@@ -12,10 +12,7 @@
     <p class='service-explain'>
       情報交換ができるアプリです
     </p>
-    <div class='store-btn'>
-      <%= link_to image_tag("app-store.svg", class:"apple-btn"), "#" %>
-      <%= link_to image_tag("google-play.png", class:"google-btn"), "#" %>
-    </div>
+    
   </div>
   
 
@@ -111,11 +108,8 @@
             </div>
           
           <div class='diary-category'>
-            <span><%#= "#{diary.category}" %><br><%= "#{Category.find(diary.category_id).name}" %></span>
-            <div class='star-btn'>
-              <%= image_tag "star.png", class:"star-icon" %>
-              <span class='star-count'>0</span>
-            </div>
+            <span><%= "#{Category.find(diary.category_id).name}" %></span>
+          
           </div>
       
          <% end %>
