@@ -8,10 +8,10 @@ KODOMO
 # URL
 
 # テスト用アカウント
-・　Basic認証パスワード　：<br>
-・　BAsic認証ID ：<br>
-・　メールアドレス　：<br>
-・　パスワード　：<br>
+・　Basic認証パスワード ： 1234<br>
+・　BAsic認証ID ： kita<br>
+・　メールアドレス ： test@test.com<br>
+・　パスワード a12345：<br>
 
 # 利用方法
 
