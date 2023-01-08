@@ -6,7 +6,7 @@ class Diary < ApplicationRecord
   has_many :comments
   has_many :favorites, dependent: :destroy
   with_options presence: true do
-    validates :title, :text
+    validates :title, :text, :image
   end
 
   with_options numericality: { other_than: 0, message: "can't be blank" } do
