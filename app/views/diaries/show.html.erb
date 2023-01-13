@@ -45,26 +45,23 @@
         </tr>
       </tbody>
     </table>
-    <div class="option">
+   <div class="option">
     <%unless user_signed_in? && current_user.id == @diary.user_id then%>
 
     <div class='star-btn' id="favorite_<%= @diary.id %>">
-  <%= render "favorites/favorite", diary: @diary %>
-  <%else%>
-  <div class="favorite-btn">
+     <%= render "favorites/favorite", diary: @diary %>
+     <%else%>
+     <div class="favorite-btn">
        <p><span>お気に入りされた数: </span><%= @diary.favorites.count %></p>
      </div>
-</div>
-    <% end %>
     </div>
+    <% end %>
+   </div>
   </div>
-  <%# /日記の概要 %>
-
-
   <div class="comment-box">
-  <% if user_signed_in? %>
+   <%unless user_signed_in? && current_user.id == @diary.user_id then%>
       <%= form_with(model: [@diary, @comment], local: true) do |form| %>
-    <%= form.text_area :content, class:"comment-text",placeholder:"コメントする"%>
+     <%= form.text_area :content, class:"comment-text",placeholder:"コメントする"%>
       <p class="comment-warn">
         相手のことを考え丁寧なコメントを心がけましょう。
         <br>
@@ -83,6 +80,10 @@
         </p>
       <% end %>
    </div>
+  <%# /日記の概要 %>
+
+
+  
 </div>
 
 
